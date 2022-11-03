@@ -380,8 +380,7 @@ article p {
 
 #activities article {
     flex: 1 1 0;
-    width: 0;
-    max-width: 22%;
+    width: 22%;
 }
 
 .card-host-high {
@@ -469,10 +468,12 @@ footer li {
 
     .popular > div {
         flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     .popular article {
         height: initial;
+        width: 31%;
     }
 
     .card-host-high .illustration {
@@ -483,6 +484,10 @@ footer li {
 @media (max-width: 768px) {
     html {
         padding: 0;
+    }
+
+    article {
+        max-width: 408px;
     }
 
     h2 {
@@ -540,16 +545,20 @@ footer li {
         flex-direction: column;
     }
 
+    .filters h2 {
+        align-self: flex-start;
+    }
+
     .filters ul {
         padding: 0;
-        gap: 15px;
-        justify-content: space-around;
+        gap: 1rem;
+        justify-content: center;
         align-items: flex-start;
     }
     .filters li {
         /*flex: 1 1 100%;*/
-        width: 34%;
-        font-size: 11px;
+        width: 40%;
+        font-size: 0.9rem;
 
     }
     #hosts {
@@ -579,16 +588,27 @@ footer li {
 
     .popular > div {
         flex-direction: column;
+        align-items: center;
         gap: 18px;
+    }
+
+    .popular article {
+        width: 100%;
     }
 
     .results > div {
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 18px;
+        justify-items: center;
+    }
+
+    .results article {
+        width: 100%;
     }
 
     #activities > div {
         flex-direction: column;
+        align-items: center;
         gap: 18px;
     }
 
@@ -598,8 +618,7 @@ footer li {
 
     #activities article {
         height: auto;
-        width: auto;
-        max-width: initial;
+        width: 100%;
     }
 
     #activities .illustration {
