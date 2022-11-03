@@ -431,7 +431,7 @@ footer li {
     margin-bottom: 12px;
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
     .results {
         width: 50%;
     }
@@ -450,7 +450,6 @@ footer li {
 
     .card-host-left .illustration {
         max-width: 9vw;
-        min-width: 9vw;
     }
 }
 
@@ -464,6 +463,10 @@ footer li {
 
     .results {
         width: initial;
+    }
+
+    .results > div {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .popular > div {
@@ -576,6 +579,7 @@ footer li {
 
     .popular {
         border-radius: 0;
+        width: 100%;
     }
 
     .popular .illustration {
